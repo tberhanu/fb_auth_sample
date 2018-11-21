@@ -287,9 +287,8 @@ Devise.setup do |config|
   # ActiveSupport.on_load(:devise_failure_app) do
   #   include Turbolinks::Controller
   # end
-  config.omniauth :facebook, "354999245259590", "46cf10e287e2863c4f54373334d8b6a6",
-   callback_url: "http://localhost:3000/users/auth/facebook/callback"
+  
 
-  # config.omniauth :facebook, "App ID", "App Secret", callback_url: "http://localhost:3000/users/auth/facebook/callback"
+  config.omniauth :facebook, ENV["FB_APP_ID"], ENV["FB_APP_SECRET"], callback_url: "http://localhost:3000/users/auth/facebook/callback"
 
 end
